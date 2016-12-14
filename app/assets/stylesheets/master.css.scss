@@ -7,6 +7,13 @@ body {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
+/* Sets the (non-hover) color of the Nomster link in upper-L corner */
+.navbar-inverse .navbar-brand {
+  color: #ffdb87;
+  font-family: 'Domine', serif;
+}
+
+/* Styles the navbar */
 .navbar.navbar-inverse {
   background-image: url('/assets/horizwood1.jpg');
   border-radius: 0;
@@ -28,7 +35,7 @@ body {
 .placename {
   color: #fff;
   text-shadow: 2px 2px 1px #777;
-  margin-bottom: 2%;
+  margin-bottom: 1.2%;
 }
 
 .address {
