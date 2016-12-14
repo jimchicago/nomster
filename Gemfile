@@ -5,8 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.9'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -28,6 +26,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+# These 3 gems added by Jim H on 12/14/16, per Track #3, Lesson #7
+gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'sprockets', '2.11.0'
+gem 'sass-rails'  # Use for SCSS stylesheets
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
