@@ -1,2 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: linear-gradient(#cc971c, #fff);
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin: 0 2% 2% 2%;
+  padding: 0 1.5%;
+  border-radius: 2em 2em 0 0;
+}
+
+.placename {
+  color: #fff;
+  text-shadow: 2px 2px 2px #555;
+  margin-bottom: 2%;
+}
+
+.wavy {
+  height: 6px;
+  width: 100%;
+  background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    border: 0;
+}
