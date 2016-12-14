@@ -1,20 +1,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: url('/assets/wood_pattern.png');
+  /* background: url('/assets/tileable_wood_texture.png') */
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.navbar.navbar-inverse {
+  background-image: url('/assets/horizwood1.jpg');
+  border-radius: 0;
+  box-shadow: 0 1px 3px #2a2a2a;
+}
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
   background: linear-gradient(#cc971c, #fff);
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  border: 1px solid #cc971c;
+  /* border-color: #e4e4e4 #bebebd #bebebd #e4e4e4; */
   margin: 0 2% 2% 2%;
-  padding: 0 1.5%;
+  padding: 0 1.7%;
   border-radius: 2em 2em 0 0;
 }
 
 .placename {
   color: #fff;
-  text-shadow: 2px 2px 2px #555;
+  text-shadow: 2px 2px 1px #777;
   margin-bottom: 2%;
 }
