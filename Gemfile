@@ -15,6 +15,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Added by Jim H on 12/13/16, as instructed by TFP Track 3 Lesson #2
 gem 'rails_12factor', group: :production
 
+# Added by Jim H on 12/15/16 for Paginate Challenge (TFP Track #3, Lesson #12)
+gem 'kaminari'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
