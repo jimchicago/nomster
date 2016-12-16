@@ -42,3 +42,16 @@ body {
 .address {
   font-size: 110%;
 }
+
+.newplace-box {
+  padding-bottom: 2%;
+}
+
+nav.pagination {
+  font-size:115%;
+  font-family: sans-serif;
+}
+
+nav.pagination::before {
+  content: "Pages:"
+}
