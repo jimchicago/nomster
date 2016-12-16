@@ -34,9 +34,8 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'  # Use for SCSS stylesheets
-
-# Added by Jim H on 12/15/16 per TFP Track #3, Lesson #13:
-gem 'simple_form'
+gem 'simple_form' # Added by Jim H, per TFP Track #3, Lesson #13
+gem 'devise', '>= 3.2.4' # Added by Jim H, per Track #3, Lesson #16
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
