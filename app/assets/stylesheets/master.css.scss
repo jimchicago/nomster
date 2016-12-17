@@ -53,10 +53,15 @@ body {
 }
 
 nav.pagination {
-  font-size:115%;
+  font-size:112%;
   font-family: sans-serif;
+  margin-left: 2.5%;
 }
 
 nav.pagination::before {
   content: "Pages:"
+}
+
+.user-email {
+  font-family: sans-serif;
 }
