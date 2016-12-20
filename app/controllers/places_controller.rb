@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
+    
     if @place.user != current_user
       return render text: 'You are Not Allowed to Edit this Page', status: :forbidden
     end
@@ -30,7 +31,7 @@ class PlacesController < ApplicationController
     if @place.user != current_user
       return render text: 'You are Not Allowed to Edit this Page', status: :forbidden
     end
-    
+
     @place.update_attributes(place_params)
     redirect_to root_path
   end
