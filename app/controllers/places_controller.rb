@@ -14,6 +14,10 @@ class PlacesController < ApplicationController
     redirect_to root_path     # Redirects visitor to Home page after submitting form.
   end
 
+  def show
+    @place = Place.find(params[:id])
+  end
+
   private
 
   def place_params   # Pulls submitted name, description and address values from the form.

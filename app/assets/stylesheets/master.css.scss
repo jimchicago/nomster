@@ -40,9 +40,17 @@ h2 {
   border-radius: 2em 2em 0 0;
 }
 
-.placename {
+.placename a {
   color: #fff;
   text-shadow: 2px 2px 1px #777;
+  margin-bottom: 1.2%;
+}
+
+.placename a:hover {
+  color: #000  /* #1c51cc */ ;
+  text-shadow: 2px 2px 1px #777;
+  font-style: italic;
+  text-decoration: none;
   margin-bottom: 1.2%;
 }
 
