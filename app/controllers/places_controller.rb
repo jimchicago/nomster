@@ -2,7 +2,7 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index   # Displays 'place' records (10 per page) on 'root' page(s)
-    @places = Place.all.page(params[:page]).per(10)
+    @places = Place.order("created_at ASC").page(params[:page]).per(10)
   end
 
   def new   # Creates a new database record based on data the visitor submitted
@@ -25,6 +25,12 @@ class PlacesController < ApplicationController
   def update
     @place = Place.find(params[:id])
     @place.update_attributes(place_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
     redirect_to root_path
   end
 
