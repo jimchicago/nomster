@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def index   # Displays 'place' records (10 per page) on 'root' page(s)
     @places = Place.order("created_at ASC").page(params[:page]).per(10)
@@ -20,10 +20,17 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
+    if @place.user != current_user
+      return render text: 'You are Not Allowed to Edit this Page', status: :forbidden
+    end
   end
 
   def update
     @place = Place.find(params[:id])
+    if @place.user != current_user
+      return render text: 'You are Not Allowed to Edit this Page', status: :forbidden
+    end
+    
     @place.update_attributes(place_params)
     redirect_to root_path
   end
