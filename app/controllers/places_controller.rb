@@ -10,8 +10,13 @@ class PlacesController < ApplicationController
   end
 
   def create   
-    current_user.places.create(place_params)   # Sends visitor's form submission to the database.
-    redirect_to root_path     # Redirects visitor to Home page after submitting form.
+    @place = current_user.places.create(place_params) # Sends visitor's form submission to the database.
+    
+    if @place.valid?
+      redirect_to root_path  # Redirects visitor to Home page after submitting form.  
+    else
+      render :new, status: :unprocessable_entity 
+    end
   end
 
   def show
@@ -33,7 +38,11 @@ class PlacesController < ApplicationController
     end
 
     @place.update_attributes(place_params)
-    redirect_to root_path
+    if @place.valid?
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
