@@ -11,7 +11,6 @@ class PlacesController < ApplicationController
 
   def create   
     @place = current_user.places.create(place_params) # Sends visitor's form submission to the database.
-    
     if @place.valid?
       redirect_to root_path  # Redirects visitor to Home page after submitting form.  
     else
