@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index   # Displays 'place' records (10 per page) on 'root' page(s)
     @places = Place.order("created_at ASC").page(params[:page]).per(10)
@@ -20,7 +20,7 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
-    
+
     if @place.user != current_user
       return render text: 'You are Not Allowed to Edit this Page', status: :forbidden
     end
@@ -38,6 +38,10 @@ class PlacesController < ApplicationController
 
   def destroy
     @place = Place.find(params[:id])
+    if @place.user != current_user
+      return render text: 'You are Not Allowed to Delete this Place', status: :forbidden
+    end
+
     @place.destroy
     redirect_to root_path
   end
