@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'photos/index'
+
   devise_for :users
   root 'places#index'
   resources :places do
