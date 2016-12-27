@@ -38,7 +38,7 @@ gem 'simple_form' # Added by Jim, per TFP Track #3, Lesson #13
 gem 'devise', '>= 3.2.4' # Added by Jim, per Track #3, Lesson #16
 gem "geocoder", "1.3.4" # Added by Jim, per TFP Track #3, Lesson #29
 gem "figaro", ">= 1.0.0" # Added by Jim, per TFP Track #3, Lesson #29
-
+gem 'carrierwave', '~> 1.0' # Added by Jim, per TFP Track #3, Lesson #39
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
