@@ -1,13 +1,15 @@
 class PhotosController < ApplicationController
-  def create
-    @photo = current_user.photos.create(photo_params) # Sends visitor's form submission to the database.
-    if @photo.valid?
-      redirect_to root_path  # Redirects visitor to Home page after submitting form.  
-    else
-      render :new, status: :unprocessable_entity 
-    end
-  end
+  before_action :authenticate_user!
 
-  def index
-  end
+    def create
+       @place = Place.find(params[:place_id])
+       @place.photos.create(photo_params)
+       redirect_to place_path(@place) # Redirects visitor to the place's page after submitting form.  
+    end
+    
+    private
+
+    def photo_params
+      params.require(:photo).permit(:picture, :caption)
+    end
 end
