@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'places#index'
   resources :places do
-    resources :comments, only: :create
-    resources :photos, only: :create
+    resources :comments, only: :create # Allows creating only of comments
+    resources :photos, only: :create   # Allows uploading ("creating") only of photos
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
