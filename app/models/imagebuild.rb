@@ -1,4 +1,4 @@
-class Image < ActiveRecord::Base
+class Image
   # belongs_to :user
   # has_many :comments
   # has_many :photos
@@ -10,19 +10,22 @@ class Image < ActiveRecord::Base
   # validates :address, presence: true
   # validates :description, presence: true
 
-  def initialize
-    @image = Image.new([
+  def initialize(image)
+    @image = image  # Stores 'image' for later use, makes @image part of each instance of Image
+  end
+
+  def output_image  # No need for (argument) at end of method name
+    @image.each do |row|
+      puts row.join(" ")
+    end
+  end
+
+end
+
+image = Image.new([
       [0, 0, 0, 0],
       [0, 1, 0, 0],
       [0, 0, 0, 1],
       [0, 0, 0, 0]
     ])
-
-   def output_image(image)
-    @image.each do |row|
-      puts row.join(" ")  
-  end
-
-  image.output_image
-
-end
+image.output_image
