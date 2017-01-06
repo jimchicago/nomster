@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :comments, only: :create # Allows creating only of comments
     resources :photos, only: :create   # Allows uploading ("creating") only of photos
   end
+  resources :users, only: :show  # Allows showing only of users(?)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
