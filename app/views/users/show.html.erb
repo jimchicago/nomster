@@ -1,1 +1,5 @@
-<h1>Your User Profile</h1>
+<h1>My User Profile</h1>
+<h2 class="username">Username: <%= @user.email %></h2>
+<h3>Member since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+<h4><%= @user.comments.count %> total comments</h4>
+<h4><%= @user.comments.where(rating: '5_stars').count %> Five-star ratings</h4>
