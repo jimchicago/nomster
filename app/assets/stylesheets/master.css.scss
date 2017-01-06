@@ -18,6 +18,7 @@ body {
   background-image: url('/assets/horizwood1.jpg');
   border-radius: 0;
   box-shadow: 0 1px 3px #2a2a2a;
+  margin-bottom:0;
 }
 
 #bs-example-navbar-collapse-1 {
@@ -124,4 +125,19 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  height: auto;
+  width: 100%;
+}
+
+.carousel-caption {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 115%;
+  text-shadow: 1px 1px 1px #333;
+  font-weight:100;
+  background-color: rgba(0,0,0,0.3);
+  width: 33%;
+  margin: 0 auto 0.3em auto;
 }
