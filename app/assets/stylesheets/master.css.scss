@@ -27,11 +27,13 @@ body {
 
 h2 {
   margin-left: 2.5%;
-  color:#888;
+  color: #FFF;
 }
 
 .username {
   margin-left: 0;
+  color: #FFF;
+  text-shadow: 2px 2px 1px #777;
 }
 
 .booyah-box {
@@ -145,4 +147,8 @@ blockquote p {
   background-color: rgba(0,0,0,0.3);
   width: 33%;
   margin: 0 auto 0.3em auto;
+}
+
+.avatar {
+  margin-top:2%;
 }

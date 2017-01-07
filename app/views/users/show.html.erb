@@ -1,7 +1,17 @@
-<h1>My User Profile</h1>
-<h2 class="username">Username: <%= @user.email %></h2>
-<h3>Member since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-<ul>
-<li><h3><%= @user.comments.count %> total comment(s)</h3></li>
-<li><h3><%= @user.comments.where(rating: '5_stars').count %> &starf;&starf;&starf;&starf;&starf; rating(s)</h3></li>
-</ul>
+<div class="booyah-box">
+  <div class="col-xs-4 avatar">
+    <%= image_tag "user-brown.png" %>
+  </div>
+
+  <div class="col-xs-8">
+    <h1>My User Profile</h1>
+    <h3 class="username">Username: <%= @user.email %></h3>
+    <h3>Member since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+    <ul>
+    <li><h3><%= @user.comments.count %> total comment(s)</h3></li>
+    <li><h3><%= @user.comments.where(rating: '5_stars').count %> &starf;&starf;&starf;&starf;&starf; rating(s)</h3></li>
+    </ul>
+    <br />
+  </div>
+  <div class="clear"></div>
+</div>
