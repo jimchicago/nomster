@@ -49,13 +49,13 @@ h2 {
 
 .placename a {
   color: #fff;
-  text-shadow: 2px 2px 1px #777;
+  text-shadow: 2px 2px 1px #444;
   margin-bottom: 1.2%;
 }
 
 .placename a:hover {
   color: #000  /* #1c51cc */ ;
-  text-shadow: 2px 2px 1px #777;
+  text-shadow: none !important;
   font-style: italic;
   text-decoration: none;
   margin-bottom: 1.2%;
@@ -152,6 +152,12 @@ blockquote p {
   margin-top: 2%;
 }
 
-.mycomments {
-  margin: 4% auto 2% auto;
+.mysubheads {
+  margin: 3% auto 2% auto;
+}
+
+.myhrs {
+  border-color: #CC971C;
+  height: 1px;
+  width:90%;
 }
