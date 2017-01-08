@@ -50,9 +50,9 @@
       <div class="col-xs-12">
         <blockquote>
           <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> . . .
+            <b><%= place.comments.order(:id).last.humanized_rating %></b> . . .
           <% end %> 
-          <%= place.comments.last.message %>
+          <%= place.comments.order(:id).last.message %>
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
