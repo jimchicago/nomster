@@ -42,7 +42,7 @@ h2 {
   background: linear-gradient(#CC971C, #fff)  /* golden brown: #cc971c */;
   border: 1px solid #cc971c;
   /* border-color: #e4e4e4 #bebebd #bebebd #e4e4e4; */
-  margin: 0 2% 2% 2%;
+  margin-bottom: 12px;
   padding: 0 1.7%;
   border-radius: 2em 2em 0 0;
 }
@@ -146,6 +146,10 @@ blockquote p {
   background-color: rgba(0,0,0,0.3);
   width: 33%;
   margin: 0 auto 0.3em auto;
+}
+
+.com-margin {
+  margin-top: 25px;
 }
 
 .avatar {
